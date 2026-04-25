@@ -40,13 +40,13 @@ function TiltCard({
       >
         <GlassCard
           className="relative h-full p-5 sm:p-6"
-          style={{ boxShadow: "0 24px 50px -12px rgba(47, 124, 255, 0.12)" }}
+          style={{ boxShadow: "0 24px 50px -12px rgba(22, 163, 74, 0.14)" }}
         >
           <div
             className="pointer-events-none absolute inset-px -z-10 rounded-[0.9rem] opacity-0 blur-xl transition group-hover:opacity-100"
             style={{
               background:
-                "radial-gradient(200px at 20% 0%, rgba(34,240,255,0.2), transparent 50%)",
+                "radial-gradient(200px at 20% 0%, rgba(45,212,191,0.2), transparent 50%)",
             }}
           />
           <motion.div
@@ -71,7 +71,7 @@ export function ServicesSection() {
       <div className="pointer-events-none absolute inset-0 -z-10">
         <div
           className="absolute right-0 top-1/4 h-72 w-72 -translate-y-1/2 rounded-full opacity-20 blur-3xl"
-          style={{ background: "radial-gradient(closest-side, #8b5cf6, transparent)" }}
+          style={{ background: "radial-gradient(closest-side, #84cc16, transparent)" }}
         />
       </div>
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

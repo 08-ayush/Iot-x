@@ -35,9 +35,9 @@ function Sparkline({ uid }: { uid: string }) {
       />
       <defs>
         <linearGradient id={gid} x1="0" y1="0" x2="1" y2="0">
-          <stop stopColor="#22f0ff" stopOpacity="0.2" />
-          <stop offset="0.5" stopColor="#2f7cff" stopOpacity="0.9" />
-          <stop offset="1" stopColor="#8b5cf6" stopOpacity="0.5" />
+          <stop stopColor="#2dd4bf" stopOpacity="0.24" />
+          <stop offset="0.5" stopColor="#16a34a" stopOpacity="0.9" />
+          <stop offset="1" stopColor="#84cc16" stopOpacity="0.5" />
         </linearGradient>
       </defs>
     </svg>
@@ -50,7 +50,7 @@ function Panel({ id, name, stat, hint }: (typeof industries)[number]) {
       <div
         className="pointer-events-none absolute -right-6 -top-6 h-32 w-32 rounded-full opacity-0 blur-2xl transition group-hover:opacity-100"
         style={{
-          background: "radial-gradient(closest-side, rgba(34,240,255,0.15), transparent)",
+          background: "radial-gradient(closest-side, rgba(45,212,191,0.18), transparent)",
         }}
       />
       <div className="mb-2 flex items-center justify-between">

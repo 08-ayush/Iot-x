@@ -35,7 +35,7 @@ function DataArcs() {
         <Line
           key={`arc-${i}`}
           points={p}
-          color={i % 2 ? "#2f7cff" : "#22f0ff"}
+          color={i % 2 ? "#16a34a" : "#2dd4bf"}
           lineWidth={0.4}
           transparent
           opacity={0.4}
@@ -93,8 +93,8 @@ function IotNodes() {
     <instancedMesh ref={inst} args={[undefined, undefined, 56]}>
       <icosahedronGeometry args={[1, 0]} />
       <meshStandardMaterial
-        color="#22f0ff"
-        emissive="#0a1a2e"
+        color="#2dd4bf"
+        emissive="#0c2a1d"
         emissiveIntensity={1.4}
         metalness={0.2}
         roughness={0.2}
@@ -117,7 +117,7 @@ function GlobeRig() {
         <mesh>
           <icosahedronGeometry args={[1.25, 2]} />
           <meshBasicMaterial
-            color="#0e2a4a"
+            color="#123226"
             wireframe
             transparent
             opacity={0.35}
@@ -126,7 +126,7 @@ function GlobeRig() {
         <mesh>
           <icosahedronGeometry args={[1.28, 1]} />
           <meshBasicMaterial
-            color="#2f7cff"
+            color="#16a34a"
             wireframe
             transparent
             opacity={0.18}
@@ -140,9 +140,9 @@ function GlobeRig() {
 function Scene() {
   return (
     <group>
-      <ambientLight intensity={0.45} color="#1c3b6a" />
-      <directionalLight position={[4, 2, 4]} intensity={0.6} color="#4aa3ff" />
-      <pointLight position={[-3, 1, 2]} intensity={1.1} color="#22f0ff" />
+      <ambientLight intensity={0.45} color="#20382c" />
+      <directionalLight position={[4, 2, 4]} intensity={0.6} color="#52c98e" />
+      <pointLight position={[-3, 1, 2]} intensity={1.1} color="#2dd4bf" />
       <GlobeRig />
       <IotNodes />
       <DataArcs />

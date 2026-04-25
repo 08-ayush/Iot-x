@@ -18,7 +18,7 @@ export function ContactSection() {
     <section id="contact" className="relative z-10 border-t border-white/5 py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-10 text-center max-w-3xl mx-auto">
-          <p className="font-mono text-xs uppercase tracking-[0.2em] text-violet-300/80">{contact.eyebrow}</p>
+          <p className="font-mono text-xs uppercase tracking-[0.2em] text-emerald-300/80">{contact.eyebrow}</p>
           <h2 className="mt-2 font-display text-3xl font-bold tracking-[-0.04em] text-snow sm:text-4xl">
             {contact.title}
           </h2>

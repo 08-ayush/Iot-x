@@ -6,15 +6,15 @@
   --font-sans: var(--font-geist), system-ui, sans-serif;
   --font-mono: var(--font-geist-mono), ui-monospace, monospace;
 
-  --color-void: #020204;
-  --color-navy: #0a0f1c;
-  --color-ink: #0d1220;
-  --color-mist: #94a3b8;
-  --color-snow: #e8f1ff;
-  --color-electric: #2f7cff;
-  --color-cyan: #22f0ff;
-  --color-aurora: #8b5cf6;
-  --color-grid: #1e2a3f;
+  --color-void: #05070b;
+  --color-navy: #0b1411;
+  --color-ink: #0f1e18;
+  --color-mist: #9aa8a2;
+  --color-snow: #eef6f1;
+  --color-electric: #16a34a;
+  --color-cyan: #2dd4bf;
+  --color-aurora: #84cc16;
+  --color-grid: #1f3128;
 }
 
 @layer base {
@@ -68,9 +68,9 @@ html.lenis body {
   background: linear-gradient(
     120deg,
     #ffffff 0%,
-    #c4e4ff 35%,
-    #22f0ff 50%,
-    #8b7cff 100%
+    #c8f7e9 35%,
+    #2dd4bf 55%,
+    #84cc16 100%
   );
   -webkit-background-clip: text;
   background-clip: text;
@@ -81,7 +81,7 @@ html.lenis body {
   background: linear-gradient(
     90deg,
     transparent,
-    color-mix(in srgb, #22f0ff 50%, transparent),
+    color-mix(in srgb, #2dd4bf 55%, transparent),
     transparent
   );
 }

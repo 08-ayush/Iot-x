@@ -5,17 +5,17 @@ import { motion } from "framer-motion";
 const orbs = [
   {
     cls: "left-[-14rem] top-[8vh] h-[24rem] w-[24rem]",
-    color: "rgba(47,124,255,0.2)",
+    color: "rgba(22,163,74,0.2)",
     duration: 18,
   },
   {
     cls: "right-[-12rem] top-[28vh] h-[22rem] w-[22rem]",
-    color: "rgba(139,92,246,0.18)",
+    color: "rgba(45,212,191,0.17)",
     duration: 22,
   },
   {
     cls: "left-[20%] bottom-[-11rem] h-[20rem] w-[20rem]",
-    color: "rgba(34,240,255,0.13)",
+    color: "rgba(132,204,22,0.14)",
     duration: 20,
   },
 ] as const;

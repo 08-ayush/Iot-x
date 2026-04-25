@@ -55,14 +55,14 @@ export function HeroSection() {
           className="absolute -left-1/4 top-0 h-[60%] w-[60%] rounded-full opacity-30 blur-3xl"
           style={{
             background:
-              "radial-gradient(closest-side, color-mix(in srgb, #2f7cff 40%, transparent), transparent 70%)",
+              "radial-gradient(closest-side, color-mix(in srgb, #16a34a 38%, transparent), transparent 70%)",
           }}
         />
         <div
           className="absolute -right-1/4 top-1/3 h-1/2 w-1/2 opacity-20 blur-3xl"
           style={{
             background:
-              "radial-gradient(closest-side, color-mix(in srgb, #8b5cf6 35%, transparent), transparent 70%)",
+              "radial-gradient(closest-side, color-mix(in srgb, #2dd4bf 34%, transparent), transparent 70%)",
           }}
         />
         <div className="absolute bottom-0 left-0 h-32 w-full bg-gradient-to-t from-void to-transparent" />
@@ -80,7 +80,7 @@ export function HeroSection() {
           </motion.p>
           <motion.h1
             className="font-display text-4xl font-bold leading-[1.1] tracking-[-0.04em] text-snow sm:text-5xl xl:text-6xl 2xl:text-7xl"
-            style={{ y: y1, opacity: o }}
+            style={isPhoneLike ? undefined : { y: y1, opacity: o }}
           >
             <span className="block">
               {line1.map((w, i) => (
@@ -97,7 +97,7 @@ export function HeroSection() {
               ))}
             </span>
             <motion.span
-              className="mt-1 block bg-gradient-to-r from-violet-300 via-fuchsia-300 to-orange-200 bg-clip-text text-transparent"
+              className="mt-1 block bg-gradient-to-r from-emerald-300 via-teal-300 to-lime-300 bg-clip-text text-transparent"
               initial={{ opacity: 0, y: 24, filter: "blur(6px)" }}
               animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
               transition={{ delay: 0.5, duration: 0.75, ease: [0.16, 1, 0.3, 1] }}
@@ -171,7 +171,7 @@ export function HeroSection() {
                   {c.wide ? (
                     <Link
                       href="#solutions"
-                      className="mt-3 inline-block text-xs font-medium text-orange-300/90 transition hover:text-orange-200"
+                      className="mt-3 inline-block text-xs font-medium text-emerald-300/90 transition hover:text-emerald-200"
                     >
                       Learn more →
                     </Link>

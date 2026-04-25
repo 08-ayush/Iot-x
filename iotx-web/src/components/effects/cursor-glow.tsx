@@ -53,7 +53,7 @@ export function CursorGlow() {
             className="h-full w-full rounded-full"
             style={{
               background:
-                "radial-gradient(closest-side, color-mix(in srgb, #2f7cff 35%, transparent), color-mix(in srgb, #8b5cf6 18%, transparent) 40%, transparent 70%)",
+                "radial-gradient(closest-side, color-mix(in srgb, #16a34a 35%, transparent), color-mix(in srgb, #2dd4bf 20%, transparent) 40%, transparent 70%)",
               filter: "blur(60px)",
             }}
           />
