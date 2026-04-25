@@ -2,7 +2,7 @@
 
 import dynamic from "next/dynamic";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { hero, heroFeatureCards, site } from "@/content/site";
 import { MagneticButton } from "@/components/ui/magnetic-button";
 import { GlassCard } from "@/components/ui/glass-card";
@@ -28,12 +28,21 @@ const line1 = hero.titleLine1.split(" ");
 
 export function HeroSection() {
   const ref = useRef<HTMLDivElement>(null);
+  const [isPhoneLike, setIsPhoneLike] = useState(false);
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start start", "end start"],
   });
   const y1 = useTransform(scrollYProgress, [0, 1], [0, 80]);
   const o = useTransform(scrollYProgress, [0, 0.6], [1, 0]);
+
+  useEffect(() => {
+    const mq = window.matchMedia("(pointer: coarse)");
+    const update = () => setIsPhoneLike(mq.matches || window.matchMedia("(hover: none)").matches);
+    update();
+    mq.addEventListener("change", update);
+    return () => mq.removeEventListener("change", update);
+  }, []);
 
   return (
     <section
@@ -139,9 +148,11 @@ export function HeroSection() {
         </div>
 
         <div className="order-1 relative min-h-[320px] lg:order-2 lg:col-span-6 lg:min-h-[480px]">
-          <div className="absolute inset-0 -z-10 opacity-[0.35] sm:opacity-50">
-            <HeroCanvas className="h-full w-full" />
-          </div>
+          {!isPhoneLike ? (
+            <div className="absolute inset-0 -z-10 opacity-[0.35] sm:opacity-50">
+              <HeroCanvas className="h-full w-full" />
+            </div>
+          ) : null}
           <div className="relative z-10 grid grid-cols-1 gap-3 sm:grid-cols-2">
             {heroFeatureCards.map((c, index) => (
               <motion.div

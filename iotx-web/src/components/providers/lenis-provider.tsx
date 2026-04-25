@@ -9,13 +9,16 @@ type LenisProviderProps = {
 
 export function LenisProvider({ children }: LenisProviderProps) {
   useEffect(() => {
+    const isCoarsePointer =
+      window.matchMedia("(pointer: coarse)").matches || window.matchMedia("(hover: none)").matches;
+
     const lenis = new Lenis({
-      duration: 1.35,
+      duration: isCoarsePointer ? 1.9 : 1.35,
       smoothWheel: true,
       syncTouch: true,
-      touchMultiplier: 1.05,
-      wheelMultiplier: 0.9,
-      lerp: 0.09,
+      touchMultiplier: isCoarsePointer ? 0.78 : 1.05,
+      wheelMultiplier: isCoarsePointer ? 0.82 : 0.9,
+      lerp: isCoarsePointer ? 0.06 : 0.09,
     });
 
     const onAnchor = (e: Event) => {
@@ -27,7 +30,7 @@ export function LenisProvider({ children }: LenisProviderProps) {
       const el = document.querySelector(id) as HTMLElement | null;
       if (!el) return;
       e.preventDefault();
-      lenis.scrollTo(el, { offset: -88, duration: 1.2 });
+      lenis.scrollTo(el, { offset: -88, duration: isCoarsePointer ? 1.45 : 1.2 });
     };
     document.addEventListener("click", onAnchor);
 
